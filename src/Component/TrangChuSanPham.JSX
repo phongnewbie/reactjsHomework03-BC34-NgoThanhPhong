@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-
-import DanhSachSanPham from "./DanhSachSanPham";
 import Products from "./Products";
-import ShoeData from "./ShoeData.json";
+import shoeData from "./shoeData.json";
+import DanhSachSanPham from "./DanhSachSanPham";
+
 export default class TrangChuSanPham extends Component {
   state = {
     shoesState: {
@@ -28,14 +28,14 @@ export default class TrangChuSanPham extends Component {
         <div>
           <header className="font-weight-bolder ">SHOES SHOPPING MALL</header>
         </div>
-        <div>
-          <div>
-            <div>
+        <div className="card-gruop">
+          <div className="card">
+            <div className="card-body row">
               <DanhSachSanPham
-                shoeData={ShoeDatasProps}
+                shoeDatasProps={shoeData}
                 hanldeChiTiet={this.hanldeChiTiet}
               />
-              <Products shoesState={shoesState} />
+              <Products shoesState={shoeData} />
             </div>
           </div>
         </div>
